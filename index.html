@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title> surajprocreater Paathshala | Learn English Premium</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Animated Background -->
+  <div class="bg-animation">
+    <span></span><span></span><span></span><span></span><span></span>
+  </div>
+
+  <!-- ===== HOME SCREEN ===== -->
+  <section id="homeScreen" class="screen active">
+    <div class="hero">
+      <h1 class="glow-text">Digital <span>Paathshala</span></h1>
+      <p class="subtitle">Learn English the Premium Way 🎓</p>
+
+      <div class="main-options">
+        <div class="option-card translation-card" onclick="openSection('translation')">
+          <div class="icon">📘</div>
+          <h2>Translation</h2>
+          <p>Hindi → English Seekho</p>
+        </div>
+
+        <div class="option-card grammar-card" onclick="openSection('grammar')">
+          <div class="icon">📗</div>
+          <h2>Grammar</h2>
+          <p>Rules & Concepts</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TOPIC LIST SCREEN ===== -->
+  <section id="topicScreen" class="screen">
+    <button class="back-btn" onclick="goHome()">← Back</button>
+    <h2 id="sectionTitle" class="section-title">Translation Topics</h2>
+    <div id="topicGrid" class="topic-grid"></div>
+  </section>
+
+  <!-- ===== LESSON SCREEN (Teacher Mode) ===== -->
+  <section id="lessonScreen" class="screen">
+    <button class="back-btn" onclick="backToTopics()">← Back</button>
+    <div class="teacher-panel">
+      <div class="teacher-avatar">👨‍🏫</div>
+      <div class="teacher-bubble">
+        <h3 id="lessonTitle"></h3>
+        <div id="lessonContent" class="lesson-content"></div>
+      </div>
+    </div>
+    <button class="start-game-btn" onclick="startGame()">🎮 Start Puzzle Game</button>
+  </section>
+
+  <!-- ===== GAME SCREEN (Puzzle) ===== -->
+  <section id="gameScreen" class="screen">
+    <button class="back-btn" onclick="backToLesson()">← Back</button>
+
+    <div class="game-header">
+      <div class="progress-bar"><div id="progressFill"></div></div>
+      <p id="scoreText">Score: 0</p>
+    </div>
+
+    <div class="game-area">
+      <p class="game-instruction">👉 Sahi English sentence banao</p>
+      <h3 id="hindiSentence" class="hindi-sentence"></h3>
+
+      <!-- Drop Zone -->
+      <div id="dropZone" class="drop-zone"></div>
+
+      <!-- Word Bank (Draggable Words) -->
+      <div id="wordBank" class="word-bank"></div>
+    </div>
+
+    <div class="game-actions">
+      <button class="check-btn" onclick="checkAnswer()">✅ Check</button>
+      <button class="reset-btn" onclick="resetPuzzle()">🔄 Reset</button>
+    </div>
+
+    <div id="feedback" class="feedback"></div>
+  </section>
+
+  <!-- ===== RESULT SCREEN ===== -->
+  <section id="resultScreen" class="screen">
+    <div class="result-box">
+      <h1 id="resultTitle">🎉 Shabash!</h1>
+      <p id="resultMsg"></p>
+      <button class="start-game-btn" onclick="goHome()">🏠 Home</button>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
