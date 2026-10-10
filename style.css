@@ -232,10 +232,32 @@ body {
   margin-bottom: 20px;
   color: #ff6b9d;
 }
+.teacher-bubble h4 {
+  color: #ffd166;
+  margin: 18px 0 10px;
+  font-size: 1.15rem;
+}
 .lesson-content p {
   margin: 12px 0;
   line-height: 1.7;
   color: #d8d8ec;
+}
+.lesson-content ul {
+  margin: 12px 0 12px 25px;
+  color: #d8d8ec;
+  line-height: 1.9;
+}
+.lesson-content ul li { margin: 6px 0; }
+.lesson-content .formula {
+  background: rgba(196, 113, 237, 0.15);
+  border-left: 4px solid #c471ed;
+  padding: 14px 18px;
+  border-radius: 8px;
+  margin: 12px 0;
+  font-family: 'Courier New', monospace;
+  font-weight: 600;
+  color: #ffd166;
+  font-size: 1rem;
 }
 .lesson-content .example {
   background: rgba(18, 194, 233, 0.1);
@@ -243,7 +265,8 @@ body {
   padding: 12px 18px;
   border-radius: 8px;
   margin: 12px 0;
-  font-style: italic;
+  line-height: 1.7;
+  color: #d8d8ec;
 }
 .lesson-content strong { color: #ffd166; }
 
@@ -338,6 +361,7 @@ body {
 .word-chip:active { cursor: grabbing; }
 .word-chip.placed {
   background: linear-gradient(135deg, #c471ed, #12c2e9);
+  cursor: pointer;
 }
 
 .game-actions {
@@ -399,4 +423,5 @@ body {
   .option-card { width: 100%; }
   .teacher-panel { flex-direction: column; align-items: center; }
   .hindi-sentence { font-size: 1.2rem; }
+  .teacher-bubble h3 { font-size: 1.3rem; }
 }
